@@ -1,0 +1,165 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#app {
+  color: #272D40;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #app nav {
+    padding: 0.8rem 2.4rem;
+    background: rgba(255, 255, 255, 0.97);
+    z-index: 2;
+    -webkit-box-shadow: 0 2px 4px -3px #41b883;
+    box-shadow: 0 2px 4px -3px #41b883; }
+    #app nav .nav-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 1070px;
+      margin: 0 auto; }
+      #app nav .nav-container #logo {
+        height: 32px;
+        width: 35px; }
+        #app nav .nav-container #logo-vue {
+          height: auto;
+          width: 100%; }
+      #app nav .nav-container #container-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 24px;
+        width: 34%;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  #app main .wrapper {
+    max-width: 1070px;
+    margin: 0 auto; }
+    #app main .wrapper .wrapper__title {
+      position: relative;
+      margin-bottom: 30px;
+      margin-top: 15px;
+      text-align: center; }
+      #app main .wrapper .wrapper__title .title {
+        text-transform: uppercase;
+        color: #2B2D42;
+        font-weight: 700; }
+    #app main .wrapper form {
+      position: relative;
+      margin: 40px auto;
+      text-align: center; }
+      #app main .wrapper form .form__input {
+        width: 40%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        color: #272D40;
+        border: 0;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+        padding: 4px 0;
+        border-bottom: 1px solid #272D40;
+        background-color: transparent; }
+        #app main .wrapper form .form__input:focus ~ label {
+          top: -16px;
+          font-size: 12px;
+          color: #41b883;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+        #app main .wrapper form .form__input:focus ~ .focus-border::before,
+        #app main .wrapper form .form__input:focus ~ .focus-border::after {
+          width: 20%;
+          -webkit-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s; }
+      #app main .wrapper form label {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 5px;
+        color: #272D40;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        z-index: -1;
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: 700; }
+      #app main .wrapper form .focus-border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        z-index: 99; }
+        #app main .wrapper form .focus-border::before, #app main .wrapper form .focus-border::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          height: 100%;
+          background-color: #41b883;
+          -webkit-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s; }
+        #app main .wrapper form .focus-border::before {
+          left: 50%; }
+        #app main .wrapper form .focus-border::after {
+          right: 50%; }
+    #app main .wrapper .container {
+      position: relative; }
+      #app main .wrapper .container .alert {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        right: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 30%;
+        border: 1px solid #41b883;
+        background-color: #41b883;
+        cursor: pointer;
+        color: #fff;
+        padding: 0.25rem 1.25rem;
+        border-radius: 0.25rem;
+        text-align: center;
+        margin: 20px auto;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+    #app main .wrapper .container__article {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 80px; }
+      #app main .wrapper .container__article .card {
+        position: relative;
+        width: 320px;
+        height: 400px;
+        padding: 8rem 2rem 0;
+        color: #E9EAEC;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0px 10px; }
