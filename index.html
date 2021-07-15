@@ -9,23 +9,45 @@
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body id="app">
+<body>
   
-  <nav>
-    <div class="nav-container">
-      <div id="logo">
-        <a href="">
-          <img src="./assets/img/logo.png" id="logo-vue" alt="">
-        </a>
+  <div id="app">
+    <nav>
+      <div class="nav-container">
+        <div id="logo">
+          <router-link to="/">
+            <img src="./assets/img/logo.png" id="logo-vue" alt="">
+          </router-link>
+        </div>
+        <ul id="container-list">
+          <li>
+            <router-link to="/user-settings">
+              <i class="fas fa-user"></i>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/wish-list">
+              <i class="fas fa-heart"></i>
+              <span id="nav-notif"></span>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/shopping-cart">
+              <i class="fas fa-shopping-cart"></i>
+            </router-link>
+          </li>
+        </ul>
       </div>
-      <ul id="container-list">
+    </nav>
 
-      </ul>
-    </div>
-  </nav>
-  <main>
-
-  </main>
-  <script src="./assets/js/index.js"></script>
+    <main>
+      <router-view></router-view>
+    </main>
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="./assets/js/vue.js"></script>
 </body>
 </html>
