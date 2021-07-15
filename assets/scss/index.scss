@@ -37,6 +37,21 @@
         font-size: 24px;
         width: 34%;
         justify-content: space-around;
+
+        li {
+          list-style: none;
+          cursor: pointer;
+          a {
+            
+            i {
+              color: #272D40;
+              transition: .5s;
+            }
+            &:hover i {
+              color: #41b883;
+            }
+          }
+        }
       }
     }
   }

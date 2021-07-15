@@ -41,6 +41,16 @@
         width: 34%;
         -ms-flex-pack: distribute;
         justify-content: space-around; }
+        #app nav .nav-container #container-list li {
+          list-style: none;
+          cursor: pointer; }
+          #app nav .nav-container #container-list li a i {
+            color: #272D40;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s; }
+          #app nav .nav-container #container-list li a:hover i {
+            color: #41b883; }
   #app main .wrapper {
     max-width: 1070px;
     margin: 0 auto; }
