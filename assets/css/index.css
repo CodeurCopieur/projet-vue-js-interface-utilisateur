@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: sans-serif; }
 
 #app {
   color: #272D40;
@@ -51,49 +52,50 @@
             transition: .5s; }
           #app nav .nav-container #container-list li a:hover i {
             color: #41b883; }
-  #app main .wrapper {
+  #app main .container {
     max-width: 1070px;
     margin: 0 auto; }
-    #app main .wrapper .wrapper__title {
+    #app main .container__form {
       position: relative;
       margin-bottom: 30px;
       margin-top: 15px;
       text-align: center; }
-      #app main .wrapper .wrapper__title .title {
-        text-transform: uppercase;
-        color: #2B2D42;
-        font-weight: 700; }
-    #app main .wrapper form {
+    #app main .container__title {
+      text-transform: uppercase;
+      color: #2B2D42;
+      font-weight: 700; }
+    #app main .container form {
       position: relative;
       margin: 40px auto;
       text-align: center; }
-      #app main .wrapper form .form__input {
+      #app main .container form .form__input {
         width: 40%;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         letter-spacing: 1px;
         color: #272D40;
         border: 0;
+        outline: none;
         border-bottom-color: currentcolor;
         border-bottom-style: none;
         border-bottom-width: 0px;
         padding: 4px 0;
         border-bottom: 1px solid #272D40;
         background-color: transparent; }
-        #app main .wrapper form .form__input:focus ~ label {
+        #app main .container form .form__input:focus ~ label {
           top: -16px;
           font-size: 12px;
           color: #41b883;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
-        #app main .wrapper form .form__input:focus ~ .focus-border::before,
-        #app main .wrapper form .form__input:focus ~ .focus-border::after {
+        #app main .container form .form__input:focus ~ .focus-border::before,
+        #app main .container form .form__input:focus ~ .focus-border::after {
           width: 20%;
           -webkit-transition: 0.4s;
           -o-transition: 0.4s;
           transition: 0.4s; }
-      #app main .wrapper form label {
+      #app main .container form label {
         position: absolute;
         left: 0;
         width: 100%;
@@ -107,14 +109,14 @@
         margin-bottom: 5px;
         text-transform: uppercase;
         font-weight: 700; }
-      #app main .wrapper form .focus-border {
+      #app main .container form .focus-border {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
         z-index: 99; }
-        #app main .wrapper form .focus-border::before, #app main .wrapper form .focus-border::after {
+        #app main .container form .focus-border::before, #app main .container form .focus-border::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -124,13 +126,13 @@
           -webkit-transition: 0.4s;
           -o-transition: 0.4s;
           transition: 0.4s; }
-        #app main .wrapper form .focus-border::before {
+        #app main .container form .focus-border::before {
           left: 50%; }
-        #app main .wrapper form .focus-border::after {
+        #app main .container form .focus-border::after {
           right: 50%; }
-    #app main .wrapper .container {
+    #app main .container .container__result {
       position: relative; }
-      #app main .wrapper .container .alert {
+      #app main .container .container__result .alert {
         position: absolute;
         top: -50px;
         left: 50%;
@@ -150,7 +152,7 @@
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s; }
-    #app main .wrapper .container__article {
+    #app main .container .container__article {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -164,7 +166,7 @@
       -ms-flex-pack: center;
       justify-content: center;
       margin-top: 80px; }
-      #app main .wrapper .container__article .card {
+      #app main .container .container__article .card {
         position: relative;
         width: 320px;
         height: 400px;

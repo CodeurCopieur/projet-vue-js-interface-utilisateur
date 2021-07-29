@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 #app {
@@ -59,23 +60,24 @@
 
   //main
   main {
-    .wrapper {
+    .container {
       max-width: 1070px;
       margin: 0 auto;
 
       //titre page 
-      .wrapper__title {
+      &__form {
         position: relative;
         margin-bottom: 30px;
         margin-top: 15px;
         text-align: center;
 
-        .title {
+        
+      }
+      &__title {
           text-transform: uppercase;
           color: #2B2D42;
           font-weight: 700;
         }
-      }
       //form
       form {
         position: relative;
@@ -89,6 +91,7 @@
           letter-spacing: 1px;
           color: #272D40;
           border: 0;
+          outline: none;
               border-bottom-color: currentcolor;
               border-bottom-style: none;
               border-bottom-width: 0px;
@@ -154,7 +157,7 @@
         }
       }
       //container message resultat
-      .container {
+      .container__result {
         position: relative;
 
         .alert {

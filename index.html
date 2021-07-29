@@ -40,11 +40,33 @@
       </div>
     </nav>
 
-    <main>
-      <router-view></router-view>
-    </main>
+        <router-view></router-view>
   </div>
   
+  <script type="text/x-template" id="home">
+    <main id="home">
+
+      <div class="container">
+        <div class="container__form">
+          <h3 class="container__title">Home</h3>
+
+          <!--Search display-->
+
+          <form action="">
+            <input type="text" class="form__input">
+            <label for="">Search</label>
+            <span class="focus-border"></span>
+          </form>
+
+          <!-- Message resultat -->
+          <div class="container__result">
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  </script>
   
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
