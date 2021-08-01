@@ -5,53 +5,65 @@
   box-sizing: border-box;
   font-family: sans-serif; }
 
+/*===== Couleur =====*/
+/*===== Police et typographie =====*/
+nav {
+  padding: 0.8rem 2.4rem;
+  background: rgba(255, 255, 255, 0.97);
+  z-index: 2;
+  -webkit-box-shadow: 0 2px 4px -3px #41b883;
+  box-shadow: 0 2px 4px -3px #41b883; }
+  nav .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1070px;
+    margin: 0 auto; }
+    nav .nav-container #logo {
+      height: 32px;
+      width: 35px; }
+      nav .nav-container #logo-vue {
+        height: auto;
+        width: 100%; }
+    nav .nav-container #container-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 24px;
+      width: 34%;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      nav .nav-container #container-list li {
+        list-style: none;
+        cursor: pointer; }
+        nav .nav-container #container-list li a i {
+          color: #272D40;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+        nav .nav-container #container-list li a:hover i {
+          color: #41b883; }
+
 #app {
   color: #272D40;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  #app nav {
-    padding: 0.8rem 2.4rem;
-    background: rgba(255, 255, 255, 0.97);
-    z-index: 2;
-    -webkit-box-shadow: 0 2px 4px -3px #41b883;
-    box-shadow: 0 2px 4px -3px #41b883; }
-    #app nav .nav-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      max-width: 1070px;
-      margin: 0 auto; }
-      #app nav .nav-container #logo {
-        height: 32px;
-        width: 35px; }
-        #app nav .nav-container #logo-vue {
-          height: auto;
-          width: 100%; }
-      #app nav .nav-container #container-list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-size: 24px;
-        width: 34%;
-        -ms-flex-pack: distribute;
-        justify-content: space-around; }
-        #app nav .nav-container #container-list li {
-          list-style: none;
-          cursor: pointer; }
-          #app nav .nav-container #container-list li a i {
-            color: #272D40;
-            -webkit-transition: .5s;
-            -o-transition: .5s;
-            transition: .5s; }
-          #app nav .nav-container #container-list li a:hover i {
-            color: #41b883; }
+  #app .fade-enter, #app .fade-leave-to {
+    opacity: 0;
+    -webkit-transform: translateX(2em);
+    -ms-transform: translateX(2em);
+    transform: translateX(2em); }
+  #app .fade-enter-active, #app .fade-leave-active {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
   #app main .container {
     max-width: 1070px;
     margin: 0 auto; }
@@ -130,9 +142,9 @@
           left: 50%; }
         #app main .container form .focus-border::after {
           right: 50%; }
-    #app main .container .container__result {
+    #app main .container__result {
       position: relative; }
-      #app main .container .container__result .alert {
+      #app main .container__result .alert {
         position: absolute;
         top: -50px;
         left: 50%;
@@ -152,7 +164,7 @@
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s; }
-    #app main .container .container__article {
+    #app main .container__article {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -162,11 +174,8 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
       margin-top: 80px; }
-      #app main .container .container__article .card {
+      #app main .container__article .card {
         position: relative;
         width: 320px;
         height: 400px;
@@ -175,3 +184,87 @@
         overflow: hidden;
         cursor: pointer;
         margin: 0px 10px; }
+        #app main .container__article .card::before {
+          content: '';
+          position: absolute;
+          overflow: hidden;
+          width: 150%;
+          height: 70%;
+          top: -160%;
+          bottom: -20%;
+          left: -20%;
+          -webkit-transform: rotate(5deg);
+          -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+          background-color: #41b883;
+          border: 5px solid #35495E;
+          z-index: -1;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+        #app main .container__article .card::after {
+          content: '';
+          position: absolute;
+          overflow: hidden;
+          width: 150%;
+          height: 70%;
+          bottom: 10%;
+          left: -20%;
+          -webkit-transform: rotate(5deg);
+          -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+          background-color: #35495E;
+          border: 5px solid #41b883;
+          z-index: -1;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+        #app main .container__article .card:hover .card__data {
+          -webkit-transform: translateY(-0.1rem);
+          -ms-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+          color: #35495E; }
+          #app main .container__article .card:hover .card__data .card__txt, #app main .container__article .card:hover .card__data .wrapper__btns a {
+            -webkit-transition-delay: .2s;
+            -o-transition-delay: .2s;
+            transition-delay: .2s;
+            opacity: 1; }
+        #app main .container__article .card:hover::before {
+          top: 10%; }
+        #app main .container__article .card:hover::after {
+          bottom: -200%; }
+        #app main .container__article .card picture {
+          display: block;
+          position: relative;
+          height: 0;
+          padding-top: 50%; }
+          #app main .container__article .card picture img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; }
+        #app main .container__article .card .card__img {
+          -webkit-filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+          filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4)); }
+        #app main .container__article .card .card__data {
+          -webkit-transform: translateY(10.2rem);
+          -ms-transform: translateY(10.2rem);
+          transform: translateY(10.2rem);
+          text-align: center;
+          -webkit-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s; }
+          #app main .container__article .card .card__data .card__title {
+            font-size: 1.5rem;
+            color: #F2F5FF;
+            margin-bottom: .5rem; }
+          #app main .container__article .card .card__data .card__price {
+            display: inline-block;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem; }
+          #app main .container__article .card .card__data .card__txt {
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            opacity: 0; }

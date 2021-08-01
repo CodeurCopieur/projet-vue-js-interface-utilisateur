@@ -1,0 +1,48 @@
+//nav 
+nav {
+  padding: 0.8rem 2.4rem;
+  background: rgba(255, 255, 255, 0.97);
+  z-index: 2;
+  box-shadow: 0 2px 4px -3px #41b883;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1070px;
+    margin: 0 auto;
+
+
+    #logo {
+      height: 32px;
+      width: 35px;
+
+      &-vue {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    #container-list {
+      display: flex;
+      font-size: 24px;
+      width: 34%;
+      justify-content: space-around;
+
+      li {
+        list-style: none;
+        cursor: pointer;
+        a {
+          
+          i {
+            color: #272D40;
+            transition: .5s;
+          }
+          &:hover i {
+            color: #41b883;
+          }
+        }
+      }
+    }
+  }
+}
