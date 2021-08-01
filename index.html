@@ -7,7 +7,7 @@
   <title>Interface utilisateur </title>
 
   <link rel="stylesheet" href="./assets/css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
 </head>
 <body>
   
@@ -22,25 +22,26 @@
         <ul id="container-list">
           <li>
             <router-link to="/user-settings">
-              <i class="fas fa-user"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path></svg>
             </router-link>
           </li>
           <li>
             <router-link to="/wish-list">
-              <i class="fas fa-heart"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"></path></svg>
               <span id="nav-notif"></span>
             </router-link>
           </li>
           <li>
             <router-link to="/shopping-cart">
-              <i class="fas fa-shopping-cart"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 4H2v2h2.3l3.28 9a3 3 0 0 0 2.82 2H19v-2h-8.6a1 1 0 0 1-.94-.66L9 13h9.28a2 2 0 0 0 1.92-1.45L22 5.27A1 1 0 0 0 21.27 4 .84.84 0 0 0 21 4zm-2.75 7h-10L6.43 6h13.24z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="16.5" cy="19.5" r="1.5"></circle></svg>
             </router-link>
           </li>
         </ul>
       </div>
     </nav>
-
+      <transition name="fade" mode="out-in">
         <router-view></router-view>
+      </transition>
   </div>
   
   <script type="text/x-template" id="home">
@@ -61,6 +62,26 @@
           <!-- Message resultat -->
           <div class="container__result">
             
+          </div>
+
+          <!-- Cards display -->
+
+          <div class="container__article">
+            <article class="card" v-for="product in products" :key="product.id">
+              <picture>
+                <img :src="product.img" :alt="product.titre" class="card__img">
+              </picture>
+              
+              <div class="card__data">
+                <h1 class="card__title">{{ product.titre }}</h1>
+                <span class="card__price">{{ product.price }}€</span>
+                <p class="card__txt">{{ product.description }}</p>
+              </div>
+
+              <div class="wrapper__btns">
+                <a href="#" class="card__like"></a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
