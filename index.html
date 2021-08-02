@@ -54,7 +54,7 @@
           <!--Search display-->
 
           <form action="">
-            <input type="text" class="form__input">
+            <input type="text" v-model="searchKey" class="form__input"placeholder="Recherche..." autocomplete="off">
             <label for="">Search</label>
             <span class="focus-border"></span>
           </form>
@@ -67,7 +67,7 @@
           <!-- Cards display -->
 
           <div class="container__article">
-            <article class="card" v-for="product in products" :key="product.id">
+            <article class="card" v-for="product in filteredList" :key="product.id">
               <picture>
                 <img :src="product.img" :alt="product.titre" class="card__img">
               </picture>
@@ -79,7 +79,18 @@
               </div>
 
               <div class="wrapper__btns">
-                <a href="#" class="card__like"></a>
+                <div class="card__like">
+                  <input type="checkbox" name="checkbox" :id="product.id">
+                  <label :for="product.id">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: #fff;transform: ;msFilter:;"><path d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"></path></svg>
+                  </label>
+                </div>
+                <div class="card__buy">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" style="fill: #fff;transform: ;msFilter:;"><path d="M21 4H2v2h2.3l3.28 9a3 3 0 0 0 2.82 2H19v-2h-8.6a1 1 0 0 1-.94-.66L9 13h9.28a2 2 0 0 0 1.92-1.45L22 5.27A1 1 0 0 0 21.27 4 .84.84 0 0 0 21 4zm-2.75 7h-10L6.43 6h13.24z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="16.5" cy="19.5" r="1.5"></circle></svg>
+                  </button>
+                  
+                </div>
               </div>
             </article>
           </div>

@@ -1,0 +1,142 @@
+.container__article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  
+  margin-top: 80px;
+
+  .card {
+    position: relative;
+    width: 320px;
+    //height: 400px;
+    //padding: 8rem 2rem 0;
+    color: #E9EAEC;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0px 10px;
+    
+
+    &::before {
+      content: '';
+      position: absolute;
+      overflow: hidden;
+      width: 150%;
+      height: 70%;
+      top: -160%;
+      bottom: -20%;
+      left: -20%;
+      transform: rotate(5deg);
+      background-color: $dark-color;
+      border: 5px solid $dark-color2;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      overflow: hidden;
+      width: 150%;
+      height: 40%;
+      bottom: 10%;
+      left: -20%;
+      transform: rotate(5deg);
+      background-color: $dark-color2;
+      border: 5px solid $dark-color;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    &:hover {
+  
+      .card__data {
+        transform: translateY(1.2rem);
+        color: $dark-color2;
+
+        .card__txt{
+          transition-delay: .2s;
+          opacity: 1;
+        }
+      }
+      
+      &::before {
+        top: 20%;
+      }
+      &::after {
+        bottom: -200%;
+      }
+    }
+
+    picture {
+      @include aspect-ratio(256, 128);
+    }
+
+    .card__img{
+      filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, .4));
+    }
+
+    .card__data {
+      transform: translateY(15.2rem);
+      text-align: center;
+      transition: all .5s;
+      
+      .card__title {
+        font-size: $h1-font-size;
+        color: $dark-color-lighten;
+        margin-bottom: .5rem;
+      }
+      .card__price{
+        display: inline-block;
+        font-size: $h2-font-size;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+      }
+      .card__txt {
+        font-size: $h2-font-size;
+        margin-bottom: 1.25rem;
+        opacity: 0;
+      }
+    }
+
+    .wrapper__btns {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      position: absolute;
+      bottom: 60px;
+      width: inherit;
+
+      div {
+        display: block;
+        width: max-content;
+        padding: 1.125rem 2rem;
+        border-radius: .5rem;
+        font-weight: 600;
+        transition: .2s;
+        font-size: 2rem;
+        
+        input {
+          display: none;
+          &:checked + label svg {
+            fill: rgb(251, 38, 38)!important;
+          }
+        }
+        label {
+          svg {
+            filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, .4));
+            transition: .5s;
+            cursor: pointer;
+            &:hover {
+              animation: scaler 0.8s infinite linear;
+            }
+          }
+          svg:hover {
+            fill: rgba(251, 38, 38, 0.5)!important;
+          }
+        }
+      }
+    }
+  }
+
+}
