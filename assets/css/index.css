@@ -224,9 +224,9 @@ button {
           -o-transition: .5s;
           transition: .5s; }
         #app main .container .container__article .card:hover .card__data {
-          -webkit-transform: translateY(-0.6rem);
-          -ms-transform: translateY(-0.6rem);
-          transform: translateY(-0.6rem);
+          -webkit-transform: translateY(1.2rem);
+          -ms-transform: translateY(1.2rem);
+          transform: translateY(1.2rem);
           color: #35495E; }
           #app main .container .container__article .card:hover .card__data .card__txt {
             -webkit-transition-delay: .2s;
@@ -260,16 +260,16 @@ button {
           -o-transition: all .5s;
           transition: all .5s; }
           #app main .container .container__article .card .card__data .card__title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: #F2F5FF;
             margin-bottom: .5rem; }
           #app main .container .container__article .card .card__data .card__price {
             display: inline-block;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 500;
             margin-bottom: 1.25rem; }
           #app main .container .container__article .card .card__data .card__txt {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             margin-bottom: 1.25rem;
             opacity: 0; }
         #app main .container .container__article .card .wrapper__btns {
@@ -283,8 +283,7 @@ button {
           -ms-flex-direction: column;
           flex-direction: column;
           position: absolute;
-          bottom: 60px;
-          width: inherit; }
+          bottom: 60px; }
           #app main .container .container__article .card .wrapper__btns div {
             display: block;
             width: -webkit-max-content;
@@ -306,10 +305,11 @@ button {
               filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
               -webkit-transition: .5s;
               -o-transition: .5s;
-              transition: .5s;
-              cursor: pointer; }
+              transition: .5s; }
               #app main .container .container__article .card .wrapper__btns div label svg:hover {
                 -webkit-animation: scaler 0.8s infinite linear;
                 animation: scaler 0.8s infinite linear; }
             #app main .container .container__article .card .wrapper__btns div label svg:hover {
               fill: rgba(251, 38, 38, 0.5) !important; }
+            #app main .container .container__article .card .wrapper__btns div button, #app main .container .container__article .card .wrapper__btns div svg {
+              cursor: pointer; }

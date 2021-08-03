@@ -105,7 +105,6 @@
       flex-direction: column;
       position: absolute;
       bottom: 60px;
-      width: inherit;
 
       div {
         display: block;
@@ -126,14 +125,20 @@
           svg {
             filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, .4));
             transition: .5s;
-            cursor: pointer;
+            
             &:hover {
               animation: scaler 0.8s infinite linear;
             }
           }
+
+          
           svg:hover {
             fill: rgba(251, 38, 38, 0.5)!important;
           }
+        }
+
+        button, svg {
+          cursor: pointer;
         }
       }
     }

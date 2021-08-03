@@ -17,10 +17,10 @@ $dark-color: #41b883;//272D40
 $dark-color2: #35495E;
 $dark-color-lighten: #F2F5FF;
 /*===== Police et typographie =====*/
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$normal-font-size: 1rem;
-$small-font-size: .875rem;
+$h1-font-size: 1.25rem;
+$h2-font-size: 1.1rem;
+$normal-font-size: .5rem;
+$small-font-size: .475rem;
 
 @mixin aspect-ratio($width, $height, $displayType: block, $important:false) {
 

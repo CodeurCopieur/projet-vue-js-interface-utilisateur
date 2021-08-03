@@ -1,35 +1,35 @@
 const products = [
   {
     id:1,
-    titre:'Nike Air Zoom Structure 20 Women',
+    titre:'Air Zoom Structure 20 Women',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 99,
     img: './assets/img/img3.png'
   },
   {
     id:2,
-    titre:'Nike Golf FI Impact 2',
+    titre:'Golf FI Impact 2',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 40,
     img:'./assets/img/img2.png'
   },
   {
     id:3,
-    titre:'Nike Air Zoom Pegasus 32',
+    titre:'Air Pegasus 32',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 60,
     img: './assets/img/img1.png'
   },
   {
     id:4,
-    titre:'Nike Air Zoom Structure 20 Women',
+    titre:'Zoom Structure 20 Women',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 60,
     img: './assets/img/img4.png'
   },
   {
     id:5,
-    titre:'Air Max Genome',
+    titre:'Max Genome',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 60,
     img: './assets/img/img6.png'
