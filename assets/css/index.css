@@ -147,7 +147,7 @@ button {
           right: 50%; }
     #app main .container__result {
       position: relative; }
-      #app main .container__result .alert {
+      #app main .container__result .container__message {
         position: absolute;
         top: -50px;
         left: 50%;
@@ -167,6 +167,12 @@ button {
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s; }
+      #app main .container__result .alert {
+        border: 1px solid #41b883;
+        background-color: #41b883; }
+      #app main .container__result .danger {
+        border: 1px solid #35495E;
+        background-color: #35495E; }
     #app main .container .container__article {
       display: -webkit-box;
       display: -ms-flexbox;

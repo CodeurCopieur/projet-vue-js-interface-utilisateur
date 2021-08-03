@@ -87,7 +87,7 @@ $small-font-size: .475rem;
       &__result {
         position: relative;
 
-        .alert {
+        .container__message  {
           position: absolute;
           top: -50px;
           left: 50%;
@@ -103,6 +103,16 @@ $small-font-size: .475rem;
           text-align: center;
           margin: 20px auto;
           transition: 0.5s;
+        }
+
+        .alert {
+          border: 1px solid #41b883;
+          background-color: #41b883;
+        }
+
+        .danger {
+          border: 1px solid $dark-color2;
+          background-color: $dark-color2;
         }
       }
       

@@ -1,7 +1,7 @@
 const products = [
   {
     id:1,
-    titre:'Air Zoom Structure 20 Women',
+    titre:'Air Zoom orange',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 99,
     img: './assets/img/img3.png'
@@ -22,7 +22,7 @@ const products = [
   },
   {
     id:4,
-    titre:'Zoom Structure 20 Women',
+    titre:'Air Structure',
     description: 'Nike Air Jordan Footwear basketball sneakers.',
     price: 60,
     img: './assets/img/img4.png'
@@ -42,7 +42,8 @@ const Home = {
   data:() => {
     return {
       products,
-      searchKey:''
+      searchKey:'',
+      liked:[]
     }
   },
   computed: {
